@@ -11,7 +11,8 @@ let package = Package(
         .library(
             name: "CPackage",
             targets: [
-                "CoreNetwork"
+                "CoreNetwork",
+                "Integration"
             ]
         )
     ],
@@ -20,6 +21,10 @@ let package = Package(
         .binaryTarget(
             name: "CoreNetwork",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CoreNetwork/526911581/CoreNetwork-27837641.526911581.xcframework.zip",
-            checksum: "ba6f15c9b98487952b17dfa4a5234342a5a7d1bc7b25fa89803cdde7d619a943")
+            checksum: "ba6f15c9b98487952b17dfa4a5234342a5a7d1bc7b25fa89803cdde7d619a943"),
+        .binaryTarget(
+            name: "Integration",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Integration/496814869/Integration-27843082.496814869.xcframework.zip",
+            checksum: "48720a196ccf5db819f4aa0f61acae7a798573b883b539fe8e5e81a60cfc29b4")
     ]
 )
