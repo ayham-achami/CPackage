@@ -8,6 +8,7 @@ let package = Package(
     platforms: [.iOS(.v13), .macCatalyst(.v14)],
     products: [
         .library(name: "CoreUI", targets: ["CoreUIWrapper"]),
+        .library(name: "Analytics", targets: ["AnalyticsWrapper"]),
         .library(name: "CoreNetwork", targets: ["CoreNetworkWrapper"]),
         .library(name: "Integration", targets: ["IntegrationWrapper"]),
         .library(name: "RealmFramework", targets: ["RealmFrameworkWrapper"])
@@ -68,5 +69,16 @@ let package = Package(
             name: "CoreUI",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CoreUI/419514678/CoreUI-27857351.419514678.xcframework.zip",
             checksum: "85213193d3bd3bab673a461be156f386fa1571cf2ab30b4e667eb44ff89a64bb"),
+        // Analytics
+        .target(name: "AnalyticsWrapper",
+                dependencies: [
+                    .target(name: "Analytics"),
+                    .target(name: "IntegrationWrapper")
+                ],
+                path: "AnalyticsWrapper"),
+        .binaryTarget(
+            name: "Analytics",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Analytics/421000317/Analytics-27853046.421000317.xcframework.zip",
+            checksum: "00f9b0c6ef11b5e61098ca5cfeb83c5da1616f1c0275511496ea0cfc27df1f42")
     ]
 )
