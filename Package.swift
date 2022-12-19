@@ -42,8 +42,8 @@ let package = Package(
                 path: "CoreNetworkWrapper"),
         .binaryTarget(
             name: "CoreNetwork",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CoreNetwork/526911581/CoreNetwork-27837641.526911581.xcframework.zip",
-            checksum: "ba6f15c9b98487952b17dfa4a5234342a5a7d1bc7b25fa89803cdde7d619a943"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CoreNetwork/302172153/CoreNetwork-27841957.302172153.xcframework.zip",
+            checksum: "c7e10c7d95a68fa72239dc895252f6306d2639d546c632b9b85fe2a17e4d205c"),
         // Integration
         .target(name: "IntegrationWrapper",
                 dependencies: [
@@ -55,8 +55,8 @@ let package = Package(
                 path: "IntegrationWrapper"),
         .binaryTarget(
             name: "Integration",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Integration/496814869/Integration-27843082.496814869.xcframework.zip",
-            checksum: "48720a196ccf5db819f4aa0f61acae7a798573b883b539fe8e5e81a60cfc29b4"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Integration/401047679/Integration-27857473.401047679.xcframework.zip",
+            checksum: "05f77a9ad0ffc8eefeec99a066c81b0b1bbad338fe650d61bd14c4d755bdfd30"),
         // CoreUI
         .target(name: "CoreUIWrapper",
                 dependencies: [
@@ -78,7 +78,7 @@ let package = Package(
                 path: "AnalyticsWrapper"),
         .binaryTarget(
             name: "Analytics",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Analytics/421000317/Analytics-27853046.421000317.xcframework.zip",
-            checksum: "00f9b0c6ef11b5e61098ca5cfeb83c5da1616f1c0275511496ea0cfc27df1f42")
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Analytics/300716819/Analytics-27857233.300716819.xcframework.zip",
+            checksum: "b76b1431d26f05729ac7c963621e313fc0963a7dcf08dd0b74990a6846461bf5")
     ]
 )
