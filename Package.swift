@@ -11,7 +11,8 @@ let package = Package(
         .library(name: "Analytics", targets: ["AnalyticsWrapper"]),
         .library(name: "CoreNetwork", targets: ["CoreNetworkWrapper"]),
         .library(name: "Integration", targets: ["IntegrationWrapper"]),
-        .library(name: "RealmFramework", targets: ["RealmFrameworkWrapper"])
+        .library(name: "RealmFramework", targets: ["RealmFrameworkWrapper"]),
+        .library(name: "CorePresentation", targets: ["CorePresentationWrapper"])
     ],
     dependencies: [
         .package(url: "https://github.com/ayham-achami/CRest", branch: "mainline"),
@@ -19,6 +20,7 @@ let package = Package(
         .package(url: "https://github.com/ayham-achami/CUIKit.git", branch: "mainline"),
         .package(url: "https://github.com/ayham-achami/CRepository", branch: "mainline"),
         .package(url: "https://github.com/ayham-achami/CFoundation.git", branch: "mainline"),
+        .package(url: "https://github.com/ayham-achami/CArchSwinject.git", branch: "mainline"),
         .package(url: "https://github.com/Alamofire/AlamofireImage.git", .upToNextMajor(from: "4.2.0"))
     ],
     targets: [
@@ -79,6 +81,19 @@ let package = Package(
         .binaryTarget(
             name: "Analytics",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Analytics/300716819/Analytics-27857233.300716819.xcframework.zip",
-            checksum: "b76b1431d26f05729ac7c963621e313fc0963a7dcf08dd0b74990a6846461bf5")
+            checksum: "b76b1431d26f05729ac7c963621e313fc0963a7dcf08dd0b74990a6846461bf5"),
+        // CorePresentation
+        .target(name: "CorePresentationWrapper",
+                dependencies: [
+                    .target(name: "CoreUIWrapper"),
+                    .target(name: "AnalyticsWrapper"),
+                    .target(name: "CorePresentation"),
+                    .product(name: "CArchSwinject", package: "CArchSwinject")
+                ],
+                path: "CorePresentationWrapper"),
+        .binaryTarget(
+            name: "CorePresentation",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CorePresentation/316729615/CorePresentation-27857758.316729615.xcframework.zip",
+            checksum: "60f97df34c92487ec2ada083ffc876756ffaa0db802d30d6ee3b8dede628dedd")
     ]
 )
