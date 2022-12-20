@@ -9,6 +9,7 @@ let package = Package(
     products: [
         .library(name: "Auth", targets: ["AuthWrapper"]),
         .library(name: "CoreUI", targets: ["CoreUIWrapper"]),
+        .library(name: "Profile", targets: ["ProfileWrapper"]),
         .library(name: "Analytics", targets: ["AnalyticsWrapper"]),
         .library(name: "CoreNetwork", targets: ["CoreNetworkWrapper"]),
         .library(name: "Integration", targets: ["IntegrationWrapper"]),
@@ -124,6 +125,17 @@ let package = Package(
         .binaryTarget(
             name: "ConferenceCore",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/ConferenceCore/438530739/ConferenceCore-27858759.438530739.xcframework.zip",
-            checksum: "538e833eef2b2aadfcf1d111c87df49f3a8395e56e820fa59ea012703e533cf6")
+            checksum: "538e833eef2b2aadfcf1d111c87df49f3a8395e56e820fa59ea012703e533cf6"),
+        // Profile
+        .target(name: "ProfileWrapper",
+                dependencies: [
+                    .target(name: "Profile"),
+                    .target(name: "CorePresentationWrapper"),
+                ],
+                path: "ProfileWrapper"),
+        .binaryTarget(
+            name: "Profile",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Profile/276760598/Profile-27858779.276760598.xcframework.zip",
+            checksum: "3c992e8488d59913d96b712ece69a6f74a16bae63c7352a668b9f7170d6ef59f")
     ]
 )
