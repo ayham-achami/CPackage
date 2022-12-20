@@ -7,6 +7,7 @@ let package = Package(
     name: "CPackage",
     platforms: [.iOS(.v13), .macCatalyst(.v14)],
     products: [
+        .library(name: "Auth", targets: ["AuthWrapper"]),
         .library(name: "CoreUI", targets: ["CoreUIWrapper"]),
         .library(name: "Analytics", targets: ["AnalyticsWrapper"]),
         .library(name: "CoreNetwork", targets: ["CoreNetworkWrapper"]),
@@ -94,6 +95,17 @@ let package = Package(
         .binaryTarget(
             name: "CorePresentation",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CorePresentation/316729615/CorePresentation-27857758.316729615.xcframework.zip",
-            checksum: "60f97df34c92487ec2ada083ffc876756ffaa0db802d30d6ee3b8dede628dedd")
+            checksum: "60f97df34c92487ec2ada083ffc876756ffaa0db802d30d6ee3b8dede628dedd"),
+        // Auth
+        .target(name: "AuthWrapper",
+                dependencies: [
+                    .target(name: "Auth"),
+                    .target(name: "CorePresentationWrapper"),
+                ],
+                path: "AuthWrapper"),
+        .binaryTarget(
+            name: "Auth",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Auth/286060656/Auth-27858722.286060656.xcframework.zip",
+            checksum: "ee2180f38160daec76a7e620539bf7627f5e407058dba4ebe8a5e8b7169cfcdc")
     ]
 )
