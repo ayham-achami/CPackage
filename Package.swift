@@ -12,14 +12,18 @@ let package = Package(
         .library(name: "Analytics", targets: ["AnalyticsWrapper"]),
         .library(name: "CoreNetwork", targets: ["CoreNetworkWrapper"]),
         .library(name: "Integration", targets: ["IntegrationWrapper"]),
+        .library(name: "ConferenceCore", targets: ["ConferenceCoreWrapper"]),
         .library(name: "RealmFramework", targets: ["RealmFrameworkWrapper"]),
-        .library(name: "CorePresentation", targets: ["CorePresentationWrapper"])
+        .library(name: "CorePresentation", targets: ["CorePresentationWrapper"]),
     ],
     dependencies: [
         .package(url: "https://github.com/ayham-achami/CRest", branch: "mainline"),
         .package(url: "https://github.com/ayham-achami/CArch", branch: "mainline"),
+        .package(url: "https://github.com/evgenyneu/Cosmos.git", branch: "master"),
         .package(url: "https://github.com/ayham-achami/CUIKit.git", branch: "mainline"),
         .package(url: "https://github.com/ayham-achami/CRepository", branch: "mainline"),
+        .package(url: "https://github.com/ayham-achami/CWebRTC.git", branch: "mainline"),
+        .package(url: "https://github.com/ra1028/DifferenceKit.git", from: .init(1, 3, 0)),
         .package(url: "https://github.com/ayham-achami/CFoundation.git", branch: "mainline"),
         .package(url: "https://github.com/ayham-achami/CArchSwinject.git", branch: "mainline"),
         .package(url: "https://github.com/Alamofire/AlamofireImage.git", .upToNextMajor(from: "4.2.0"))
@@ -106,6 +110,20 @@ let package = Package(
         .binaryTarget(
             name: "Auth",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Auth/286060656/Auth-27858722.286060656.xcframework.zip",
-            checksum: "ee2180f38160daec76a7e620539bf7627f5e407058dba4ebe8a5e8b7169cfcdc")
+            checksum: "ee2180f38160daec76a7e620539bf7627f5e407058dba4ebe8a5e8b7169cfcdc"),
+        // ConferenceCore
+        .target(name: "ConferenceCoreWrapper",
+                dependencies: [
+                    .target(name: "ConferenceCore"),
+                    .target(name: "CorePresentationWrapper"),
+                    .product(name: "Cosmos", package: "Cosmos"),
+                    .product(name: "CWebRTC", package: "CWebRTC"),
+                    .product(name: "DifferenceKit", package: "DifferenceKit")
+                ],
+                path: "ConferenceCoreWrapper"),
+        .binaryTarget(
+            name: "ConferenceCore",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/ConferenceCore/438530739/ConferenceCore-27858759.438530739.xcframework.zip",
+            checksum: "538e833eef2b2aadfcf1d111c87df49f3a8395e56e820fa59ea012703e533cf6")
     ]
 )
