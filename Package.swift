@@ -9,6 +9,7 @@ let package = Package(
     products: [
         .library(name: "Auth", targets: ["AuthWrapper"]),
         .library(name: "CoreUI", targets: ["CoreUIWrapper"]),
+        .library(name: "Account", targets: ["AccountWrapper"]),
         .library(name: "Profile", targets: ["ProfileWrapper"]),
         .library(name: "Analytics", targets: ["AnalyticsWrapper"]),
         .library(name: "CoreNetwork", targets: ["CoreNetworkWrapper"]),
@@ -130,12 +131,23 @@ let package = Package(
         .target(name: "ProfileWrapper",
                 dependencies: [
                     .target(name: "Profile"),
-                    .target(name: "CorePresentationWrapper"),
+                    .target(name: "CorePresentationWrapper")
                 ],
                 path: "ProfileWrapper"),
         .binaryTarget(
             name: "Profile",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Profile/276760598/Profile-27858779.276760598.xcframework.zip",
-            checksum: "3c992e8488d59913d96b712ece69a6f74a16bae63c7352a668b9f7170d6ef59f")
+            checksum: "3c992e8488d59913d96b712ece69a6f74a16bae63c7352a668b9f7170d6ef59f"),
+        // Account
+        .target(name: "AccountWrapper",
+                dependencies: [
+                    .target(name: "Account"),
+                    .target(name: "CorePresentationWrapper")
+                ],
+                path: "AccountWrapper"),
+        .binaryTarget(
+            name: "Account",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/291050602/Account-27858813.291050602.xcframework.zip",
+            checksum: "ed66eef751809defc890a958ba9f2da4a5e69cb1bd0941df9abee20fa57782b6")
     ]
 )
