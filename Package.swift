@@ -8,7 +8,7 @@ let package = Package(
     platforms: [.iOS(.v13), .macCatalyst(.v14)],
     products: [
         .library(name: "Auth", targets: ["AuthWrapper"]),
-        .library(name: "CoreUI", targets: ["CoreUIWrapper"]),
+        .library(name: "DCoreUI", targets: ["DCoreUIWrapper"]),
         .library(name: "Account", targets: ["AccountWrapper"]),
         .library(name: "Profile", targets: ["ProfileWrapper"]),
         .library(name: "Analytics", targets: ["AnalyticsWrapper"]),
@@ -66,18 +66,18 @@ let package = Package(
             name: "Integration",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Integration/401047679/Integration-27857473.401047679.xcframework.zip",
             checksum: "05f77a9ad0ffc8eefeec99a066c81b0b1bbad338fe650d61bd14c4d755bdfd30"),
-        // CoreUI
-        .target(name: "CoreUIWrapper",
+        // DCoreUI
+        .target(name: "DCoreUIWrapper",
                 dependencies: [
-                    .target(name: "CoreUI"),
+                    .target(name: "DCoreUI"),
                     .target(name: "CoreNetworkWrapper"),
                     .product(name: "CUIKit", package: "CUIKit")
                 ],
-                path: "CoreUIWrapper"),
+                path: "DCoreUIWrapper"),
         .binaryTarget(
-            name: "CoreUI",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CoreUI/419514678/CoreUI-27857351.419514678.xcframework.zip",
-            checksum: "85213193d3bd3bab673a461be156f386fa1571cf2ab30b4e667eb44ff89a64bb"),
+            name: "DCoreUI",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/DCoreUI/361174026/DCoreUI-27860376.361174026.xcframework.zip",
+            checksum: "eeaccee9bc1a8029ef73711b561c27186704b62c4d92755ab285810f1ad68ae8"),
         // Analytics
         .target(name: "AnalyticsWrapper",
                 dependencies: [
@@ -92,7 +92,7 @@ let package = Package(
         // CorePresentation
         .target(name: "CorePresentationWrapper",
                 dependencies: [
-                    .target(name: "CoreUIWrapper"),
+                    .target(name: "DCoreUIWrapper"),
                     .target(name: "AnalyticsWrapper"),
                     .target(name: "CorePresentation"),
                     .product(name: "CArchSwinject", package: "CArchSwinject")

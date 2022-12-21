@@ -1,5 +1,5 @@
 //
-//  CoreUIWrapper.swift
+//  DCoreUIWrapper.swift
 //  
 //
 //  Created by Kirill Selivanov on 15.12.2022.
