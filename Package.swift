@@ -147,7 +147,7 @@ let package = Package(
                 path: "AccountWrapper"),
         .binaryTarget(
             name: "Account",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/291050602/Account-27858813.291050602.xcframework.zip",
-            checksum: "ed66eef751809defc890a958ba9f2da4a5e69cb1bd0941df9abee20fa57782b6")
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/273741133/Account-27860639.273741133.xcframework.zip",
+            checksum: "87bcf31b3e993c97642e37cc598ac1a79fe6a06a2b6c7026daaafc7605572151")
     ]
 )
