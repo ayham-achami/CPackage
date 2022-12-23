@@ -83,7 +83,8 @@ let package = Package(
         .target(name: "AnalyticsWrapper",
                 dependencies: [
                     .target(name: "Analytics"),
-                    .target(name: "IntegrationWrapper")
+                    .target(name: "IntegrationWrapper"),
+                    .product(name: "CArchSwinject", package: "CArchSwinject")
                 ],
                 path: "AnalyticsWrapper"),
         .binaryTarget(
@@ -95,8 +96,7 @@ let package = Package(
                 dependencies: [
                     .target(name: "DCoreUIWrapper"),
                     .target(name: "AnalyticsWrapper"),
-                    .target(name: "CorePresentation"),
-                    .product(name: "CArchSwinject", package: "CArchSwinject")
+                    .target(name: "CorePresentation")
                 ],
                 path: "CorePresentationWrapper"),
         .binaryTarget(
