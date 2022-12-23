@@ -87,8 +87,8 @@ let package = Package(
                 path: "AnalyticsWrapper"),
         .binaryTarget(
             name: "Analytics",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Analytics/300716819/Analytics-27857233.300716819.xcframework.zip",
-            checksum: "b76b1431d26f05729ac7c963621e313fc0963a7dcf08dd0b74990a6846461bf5"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Analytics/350025445/Analytics-27863468.350025445.xcframework.zip",
+            checksum: "bdb6cdf30aebb67c7b7ecda7353d9a4fd5474ac92bff268daf50acb17a8cd51c"),
         // CorePresentation
         .target(name: "CorePresentationWrapper",
                 dependencies: [
