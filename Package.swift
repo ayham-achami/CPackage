@@ -17,7 +17,7 @@ let package = Package(
         .library(name: "ConferenceCore", targets: ["ConferenceCoreWrapper"]),
         .library(name: "RealmFramework", targets: ["RealmFrameworkWrapper"]),
         .library(name: "CorePresentation", targets: ["CorePresentationWrapper"]),
-        .library(name: "DionSDK", targets: ["DionSDKWrapper"]),
+        .library(name: "DionSDK", targets: ["DionSDKWrapper"])
     ],
     dependencies: [
         .package(url: "https://github.com/ayham-achami/CRest", branch: "mainline"),
@@ -161,7 +161,7 @@ let package = Package(
                 path: "DionSDKWrapper"),
         .binaryTarget(
             name: "DionSDK",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/DionSDK/469556173/DionSDK-27863313.469556173.xcframework.zip",
-            checksum: "54f7a020677994a46becbae05b38a3cb8889f914fb2a26b97dcf13bc8f2df7b4")
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/DionSDK/377768781/DionSDK-27863445.377768781.xcframework.zip",
+            checksum: "9e0f9c2d08e47351003214db517d0b7f7b611699124f20833a9a1fcb2fd45662")
     ]
 )
