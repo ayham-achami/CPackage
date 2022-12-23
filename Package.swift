@@ -76,8 +76,8 @@ let package = Package(
                 path: "DCoreUIWrapper"),
         .binaryTarget(
             name: "DCoreUI",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/DCoreUI/414472069/DCoreUI-27860504.414472069.xcframework.zip",
-            checksum: "fea05eca0069b22eee8c99ca0138d26748101a45cdc5699282a58784834ca4b7"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/DCoreUI/368299066/DCoreUI-27863100.368299066.xcframework.zip",
+            checksum: "06b172c61c0f0887b5c906dd238aa5cdcc5cb6e0cb66461a2928e456bcded921"),
         // Analytics
         .target(name: "AnalyticsWrapper",
                 dependencies: [
