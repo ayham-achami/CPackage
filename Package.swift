@@ -88,8 +88,8 @@ let package = Package(
                 path: "AnalyticsWrapper"),
         .binaryTarget(
             name: "Analytics",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Analytics/300716819/Analytics-27857233.300716819.xcframework.zip",
-            checksum: "b76b1431d26f05729ac7c963621e313fc0963a7dcf08dd0b74990a6846461bf5"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Analytics/350025445/Analytics-27863468.350025445.xcframework.zip",
+            checksum: "bdb6cdf30aebb67c7b7ecda7353d9a4fd5474ac92bff268daf50acb17a8cd51c"),
         // CorePresentation
         .target(name: "CorePresentationWrapper",
                 dependencies: [
@@ -101,8 +101,8 @@ let package = Package(
                 path: "CorePresentationWrapper"),
         .binaryTarget(
             name: "CorePresentation",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CorePresentation/417648692/CorePresentation-27860567.417648692.xcframework.zip",
-            checksum: "705a4c4abfe6e93bd93518805700dd87eaca53dd17971a57844d89829c9a3200"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CorePresentation/472008688/CorePresentation-27863440.472008688.xcframework.zip",
+            checksum: "afcccc4a7d53655397c3b61f5bcc6d5e556829ff97158ec82808c30b4b8afdfc"),
         // Auth
         .target(name: "AuthWrapper",
                 dependencies: [
@@ -112,8 +112,8 @@ let package = Package(
                 path: "AuthWrapper"),
         .binaryTarget(
             name: "Auth",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Auth/386430886/Auth-27860570.386430886.xcframework.zip",
-            checksum: "1fdc556fdfdc19da119734999fbc1ebac42b822be3ed1446db7f299e62051864"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Auth/467827946/Auth-27863437.467827946.xcframework.zip",
+            checksum: "53a66a23433f793236f279597851c63969a1a94982b4364e46138d482642209c"),
         // ConferenceCore
         .target(name: "ConferenceCoreWrapper",
                 dependencies: [
@@ -126,8 +126,8 @@ let package = Package(
                 path: "ConferenceCoreWrapper"),
         .binaryTarget(
             name: "ConferenceCore",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/ConferenceCore/471449589/ConferenceCore-27860580.471449589.xcframework.zip",
-            checksum: "9e9e9c1b389b0e1ba9c26761db39b7780b94f1783a001e4d7cf81d38f6d40cf1"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/ConferenceCore/421664122/ConferenceCore-27863439.421664122.xcframework.zip",
+            checksum: "986ba529e955713f958e9630c829b93e6091bfccdb367ba32ea5fe880666ed7f"),
         // Profile
         .target(name: "ProfileWrapper",
                 dependencies: [
@@ -148,8 +148,8 @@ let package = Package(
                 path: "AccountWrapper"),
         .binaryTarget(
             name: "Account",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/273741133/Account-27860639.273741133.xcframework.zip",
-            checksum: "87bcf31b3e993c97642e37cc598ac1a79fe6a06a2b6c7026daaafc7605572151"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/309530927/Account-27863435.309530927.xcframework.zip",
+            checksum: "defe0994c32ca0a6a16bb07081967f3728920cacd70090b57dc28280e9af3a1f"),
         // DionSDK
         .target(name: "DionSDKWrapper",
                 dependencies: [
