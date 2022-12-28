@@ -17,6 +17,7 @@ let package = Package(
         .library(name: "ConferenceCore", targets: ["ConferenceCoreWrapper"]),
         .library(name: "RealmFramework", targets: ["RealmFrameworkWrapper"]),
         .library(name: "CorePresentation", targets: ["CorePresentationWrapper"]),
+        .library(name: "DionSDK", targets: ["DionSDKWrapper"])
     ],
     dependencies: [
         .package(url: "https://github.com/ayham-achami/CRest", branch: "mainline"),
@@ -82,7 +83,8 @@ let package = Package(
         .target(name: "AnalyticsWrapper",
                 dependencies: [
                     .target(name: "Analytics"),
-                    .target(name: "IntegrationWrapper")
+                    .target(name: "IntegrationWrapper"),
+                    .product(name: "CArchSwinject", package: "CArchSwinject")
                 ],
                 path: "AnalyticsWrapper"),
         .binaryTarget(
@@ -94,8 +96,7 @@ let package = Package(
                 dependencies: [
                     .target(name: "DCoreUIWrapper"),
                     .target(name: "AnalyticsWrapper"),
-                    .target(name: "CorePresentation"),
-                    .product(name: "CArchSwinject", package: "CArchSwinject")
+                    .target(name: "CorePresentation")
                 ],
                 path: "CorePresentationWrapper"),
         .binaryTarget(
@@ -148,6 +149,19 @@ let package = Package(
         .binaryTarget(
             name: "Account",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/309530927/Account-27863435.309530927.xcframework.zip",
-            checksum: "defe0994c32ca0a6a16bb07081967f3728920cacd70090b57dc28280e9af3a1f")
+            checksum: "defe0994c32ca0a6a16bb07081967f3728920cacd70090b57dc28280e9af3a1f"),
+        // DionSDK
+        .target(name: "DionSDKWrapper",
+                dependencies: [
+                    .target(name: "DionSDK"),
+                    .target(name: "AuthWrapper"),
+                    .target(name: "ProfileWrapper"),
+                    .target(name: "ConferenceCoreWrapper")
+                ],
+                path: "DionSDKWrapper"),
+        .binaryTarget(
+            name: "DionSDK",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/DionSDK/377768781/DionSDK-27863445.377768781.xcframework.zip",
+            checksum: "9e0f9c2d08e47351003214db517d0b7f7b611699124f20833a9a1fcb2fd45662")
     ]
 )
