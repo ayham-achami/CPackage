@@ -65,8 +65,8 @@ let package = Package(
                 path: "IntegrationWrapper"),
         .binaryTarget(
             name: "Integration",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Integration/401047679/Integration-27857473.401047679.xcframework.zip",
-            checksum: "05f77a9ad0ffc8eefeec99a066c81b0b1bbad338fe650d61bd14c4d755bdfd30"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Integration/325461205/Integration-27870649.325461205.xcframework.zip",
+            checksum: "26d6fc42c02f6d8baa368e0d58e20209b70313f6a36c29f09bfc463b6439349d"),
         // DCoreUI
         .target(name: "DCoreUIWrapper",
                 dependencies: [
