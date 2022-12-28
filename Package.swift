@@ -52,8 +52,8 @@ let package = Package(
                 path: "CoreNetworkWrapper"),
         .binaryTarget(
             name: "CoreNetwork",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CoreNetwork/431735181/CoreNetwork-27858910.431735181.xcframework.zip",
-            checksum: "2ae67c63f345636c9c2d1db38cefb4ff387ee2a9db232ce4de0d5fc66ef181ca"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/CoreNetwork/401626702/CoreNetwork-27870612.401626702.xcframework.zip",
+            checksum: "92667b1062822f74c6b92af59a4f152ba3b9079a70f12da3f3c02761d2383569"),
         // Integration
         .target(name: "IntegrationWrapper",
                 dependencies: [
