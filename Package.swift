@@ -126,8 +126,8 @@ let package = Package(
                 path: "ConferenceCoreWrapper"),
         .binaryTarget(
             name: "ConferenceCore",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/ConferenceCore/373377194/ConferenceCore-27871657.373377194.xcframework.zip",
-            checksum: "096203c3934861c714c0baf4d65c9b334835668e5c31b9e45251c58e11e04964"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/ConferenceCore/417280605/ConferenceCore-27871838.417280605.xcframework.zip",
+            checksum: "705bbc6d85f0406e66ff1a31d9fe7f551c2efd5aeaee607236870a82671b9d23"),
         // Profile
         .target(name: "ProfileWrapper",
                 dependencies: [
