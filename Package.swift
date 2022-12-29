@@ -161,7 +161,7 @@ let package = Package(
                 path: "DionSDKWrapper"),
         .binaryTarget(
             name: "DionSDK",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/DionSDK/377768781/DionSDK-27863445.377768781.xcframework.zip",
-            checksum: "9e0f9c2d08e47351003214db517d0b7f7b611699124f20833a9a1fcb2fd45662")
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/DionSDK/393646569/DionSDK-27871705.393646569.xcframework.zip",
+            checksum: "c787893c665458db3819a7ab19c4417663e5d2ea4d59f70c7ccfdce794f3d1ce")
     ]
 )
