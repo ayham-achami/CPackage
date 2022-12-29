@@ -137,8 +137,8 @@ let package = Package(
                 path: "ProfileWrapper"),
         .binaryTarget(
             name: "Profile",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Profile/509879943/Profile-27860598.509879943.xcframework.zip",
-            checksum: "328cd6e1a7e2f51a74a51aa9ea6b8da84719047af3287d308b18ec31e68c25e6"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Profile/378350205/Profile-27871667.378350205.xcframework.zip",
+            checksum: "6a82eae13fb3495cc1f91e1a282d0dfc913de5af845a2bb34fdd720854f8bdb7"),
         // Account
         .target(name: "AccountWrapper",
                 dependencies: [
