@@ -112,8 +112,8 @@ let package = Package(
                 path: "AuthWrapper"),
         .binaryTarget(
             name: "Auth",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Auth/467827946/Auth-27863437.467827946.xcframework.zip",
-            checksum: "53a66a23433f793236f279597851c63969a1a94982b4364e46138d482642209c"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Auth/429261225/Auth-27871667.429261225.xcframework.zip",
+            checksum: "93ab5ddbcf8a886c7e49e719ac18e4313304ef1fbbba99659ae73959268c6001"),
         // ConferenceCore
         .target(name: "ConferenceCoreWrapper",
                 dependencies: [
