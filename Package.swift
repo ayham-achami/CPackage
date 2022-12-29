@@ -148,8 +148,8 @@ let package = Package(
                 path: "AccountWrapper"),
         .binaryTarget(
             name: "Account",
-            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/309530927/Account-27863435.309530927.xcframework.zip",
-            checksum: "defe0994c32ca0a6a16bb07081967f3728920cacd70090b57dc28280e9af3a1f"),
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/418311827/Account-27871694.418311827.xcframework.zip",
+            checksum: "47284283ede32aad3351f63391401b219dacdcf9c26c01fa73879bd58f23f151"),
         // DionSDK
         .target(name: "DionSDKWrapper",
                 dependencies: [
