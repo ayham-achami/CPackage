@@ -8,6 +8,7 @@ let package = Package(
     platforms: [.iOS(.v13), .macCatalyst(.v14)],
     products: [
         .library(name: "Auth", targets: ["AuthWrapper"]),
+        .library(name: "Chat", targets: ["ChatWrapper"]),
         .library(name: "DCoreUI", targets: ["DCoreUIWrapper"]),
         .library(name: "Account", targets: ["AccountWrapper"]),
         .library(name: "Profile", targets: ["ProfileWrapper"]),
@@ -20,6 +21,7 @@ let package = Package(
         .library(name: "DionSDK", targets: ["DionSDKWrapper"])
     ],
     dependencies: [
+        .package(url: "https://github.com/shimastripe/Texture", from: "3.1.1"),
         .package(url: "https://github.com/ayham-achami/CRest", branch: "mainline"),
         .package(url: "https://github.com/ayham-achami/CArch", branch: "mainline"),
         .package(url: "https://github.com/evgenyneu/Cosmos.git", branch: "master"),
@@ -150,6 +152,18 @@ let package = Package(
             name: "Account",
             url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Account/418311827/Account-27871694.418311827.xcframework.zip",
             checksum: "47284283ede32aad3351f63391401b219dacdcf9c26c01fa73879bd58f23f151"),
+        // Chat
+        .target(name: "ChatWrapper",
+                dependencies: [
+                    .target(name: "Chat"),
+                    .target(name: "ConferenceCoreWrapper"),
+                    .product(name: "AsyncDisplayKit", package: "Texture")
+                ],
+                path: "ChatWrapper"),
+        .binaryTarget(
+            name: "Chat",
+            url: "https://nexus.inno.tech/repository/vkc-hosted-raw-ios/com/innotech/Chat/501117504/Chat-27873297.501117504.xcframework.zip",
+            checksum: "55349822062b5160bc53b035577053b3c9d6387406f7ccf7af2c4d3b2831b9a6"),
         // DionSDK
         .target(name: "DionSDKWrapper",
                 dependencies: [
