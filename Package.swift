@@ -30,7 +30,7 @@ let package = Package(
         .package(url: "https://github.com/ayham-achami/CWebRTC.git", branch: "mainline"),
         .package(url: "https://github.com/ra1028/DifferenceKit.git", from: .init(1, 3, 0)),
         .package(url: "https://github.com/ayham-achami/CFoundation.git", branch: "mainline"),
-        .package(url: "https://github.com/ayham-achami/CArchSwinject.git", revision: "d9090d09eb08cb86d469d63e1fa0ef5dd51786a4"),
+        .package(url: "https://github.com/ayham-achami/CArchSwinject.git", branch: "test"),
         .package(url: "https://github.com/Alamofire/AlamofireImage.git", .upToNextMajor(from: "4.2.0"))
     ],
     targets: [
